@@ -15,7 +15,7 @@
 
 .body-header-nav-bar .nav-bar-button #projects-logo {
 
-    color: var(--clraccent);
+    color: var(--clraccent); /*to indicate current page*/
 
 }
 
