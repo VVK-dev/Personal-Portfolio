@@ -1,0 +1,143 @@
+/* > > SPECIFIC FORMATTING FOR PROJECTS PAGE < < */
+
+:root{
+
+    --clrprimary: hsl(242, 100%, 13%);
+    --clrsecondary: hsl(236, 74%, 61%);
+    --clraccent: hsla(133, 97%, 54%, 0.75) ;
+    --clrneutral: whitesmoke;
+    --clrneutral15: rgba(255, 255, 255, 0.15);
+}
+
+/* MOBILE LAYOUT */
+
+/* Header */
+
+.body-header-nav-bar .nav-bar-button #projects-logo {
+
+    color: var(--clraccent);
+
+}
+
+/* Main */
+
+main {
+
+    margin-top: 14vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 1rem;
+    font-size: large;
+
+}
+
+.project {
+
+    border: 0.15rem var(--clrneutral15) solid;
+    border-radius: 0.6rem;
+
+    margin: 1rem;
+
+}
+
+.project a{
+
+    padding: 0.5rem;
+    border: 0.15rem solid transparent;
+    border-radius: 0.6rem;
+
+    text-decoration: none;
+    color: var(--clrneutral);
+    
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.8rem;
+
+    align-items: center;
+
+}
+
+.project a:visited {
+
+    border-color: var(--clraccent); /*TODO: WHY WONT THIS WORRRKKK*/
+    
+}
+
+.project a:active {
+
+    border-color: var(--clraccent);
+    text-decoration: none;
+    color: var(--clraccent);
+    
+}
+
+.content-description {
+
+    justify-items: center;
+
+}
+
+.content-description > p {
+
+    padding: 1rem;
+
+}
+
+.content-description > header {
+
+    border-width: 0rem 0.2rem;
+    border-radius: 0.6rem;
+    border-color: var(--clraccent);
+    border-style: solid;    
+
+    padding: 0.3rem 1rem;
+
+}
+
+.content-description > header > h2{
+
+    font-weight: 420;
+
+}
+
+.content-image img {
+
+    height: 33vh;
+    width: 72vh;
+
+    margin: 0.6rem;
+
+    border: 0.15rem var(--clrneutral15) solid;
+    border-radius: 0.6rem;
+}
+
+/* PC LAYOUT */
+
+@media screen and (min-width: 900px) {
+    
+    /* Main */
+
+    .project a{
+
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    /* hover effect only on large screens - makes text difficult to read on small screens */
+    .project:hover{
+
+        background-color: var(--clrneutral15);
+
+    }
+
+    .content-description {
+
+        padding-left: 1rem;
+
+    }
+
+}

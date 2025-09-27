@@ -1,0 +1,255 @@
+/* > > COMMON FORMATTING FOR ALL PAGES < < */
+
+/* MOBILE LAYOUT */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --clrprimary: hsl(242, 100%, 13%);
+    --clrsecondary: hsl(236, 74%, 61%);
+    --clraccent: hsla(133, 97%, 54%, 0.749);
+    --clrneutral: whitesmoke;
+    --clrneutral30: rgba(255, 255, 255, 0.3);
+
+}
+
+html { 
+    
+    height: 100%;  
+    margin: 0px; 
+    padding: 0px; 
+}
+
+body {
+
+    display: grid;        
+    grid-template-rows: 1fr auto;
+    justify-self: center;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: 180;
+
+    height: 100%;
+    /* min-height: 100vh; */
+
+    background: linear-gradient(90deg, var(--clrprimary), hsl(242, 100%, 25%));
+    /* background-repeat: repeat; */
+
+    color: var(--clrneutral);
+    
+    text-align: center;
+
+}
+
+.text-third-party-font{
+
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: 200;
+
+}
+
+.text-no-wrap {
+
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+/* Header */
+
+body > header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.6);
+
+    padding-top: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    background: linear-gradient(90deg, var(--clrprimary), hsl(242, 100%, 25%));
+    background-repeat: no-repeat;
+
+}
+
+.body-header-nameplate {
+    
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    bottom: 6px;
+
+}
+
+.body-header-nameplate > h1 {
+
+    padding-right: 0.5rem;
+
+}
+
+.body-header-nameplate h1:nth-of-type(1), .body-header-nameplate h1:nth-of-type(3) {
+
+    font-size: 60px;
+    font-weight: 420;
+    color: var(--clraccent);
+
+}
+
+.body-header-nameplate h1:nth-of-type(2) {
+
+    font-size: 33px;
+    font-weight: 200;
+    color: var(--clrneutral);
+    position: relative;
+    top: 6px;
+
+}
+
+.body-header-nav-bar {
+
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+
+}
+
+.body-header-nav-bar .nav-bar-link {
+
+    text-decoration: none;
+
+}
+
+.body-header-nav-bar .nav-bar-button {
+
+    padding: 0.5rem;
+      
+    border-width: 0.2rem 0rem;
+    border-radius: 0.6rem;
+    border-color: var(--clraccent);
+    border-style: solid;
+
+    font-size: 1.2rem;
+    color: var(--clrneutral);
+
+}
+
+.body-header-nav-bar .nav-bar-button:hover {
+
+    border-color: var(--clrneutral);
+
+}
+
+.body-header-nav-bar .nav-bar-button .fa-solid {
+
+    padding: 0.15rem;
+
+} 
+
+.body-header-nav-bar .nav-bar-button a{
+
+    color: var(--clrneutral);
+    text-decoration: none;
+
+}
+
+/* Footer */
+
+footer {
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem;
+    
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(90deg, var(--clrprimary), hsl(242, 100%, 25%));
+    background-repeat: no-repeat;
+
+}
+
+.left-footer > .contacts-list {
+
+    display: flex;
+    list-style-type: none;
+    gap: 0.6rem;
+    margin: 1rem 0rem .15rem 0rem;
+
+}
+
+.left-footer > .contacts-list > .contact-item i.fa-brands, 
+.left-footer > .contacts-list > .contact-item i.fa-regular {
+
+    padding: 0.3rem;
+
+    color: var(--clraccent);
+
+}
+
+.left-footer > .contacts-list > .contact-item a{
+
+    background-color: transparent;   
+    border-width: 0.2rem 0rem;
+    border-radius: 0.6rem;
+    border-color: var(--clraccent);
+    border-style: solid;
+
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+
+}
+
+.left-footer > .contacts-list > .contact-item a:visited{
+
+    border-color: var(--clrneutral30);    
+
+}
+
+.left-footer > .contacts-list > .contact-item a:hover{
+
+    border-color: var(--clrneutral);
+ 
+}
+
+.right-footer {
+
+    margin-top: 0.6rem;
+    font-weight: 300;
+
+}
+
+/* PC LAYOUT */
+
+@media screen and (min-width: 900px) {
+
+    /* Footer */
+
+    footer {
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin: 0rem 1rem;
+
+    }
+
+    .left-footer > .contacts-list {
+
+        gap: 1rem;
+
+    }
+
+}

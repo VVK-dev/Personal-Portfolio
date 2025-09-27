@@ -1,0 +1,221 @@
+/* > > SPECIFIC FORMATTING FOR INDEX PAGE < < */
+
+:root{
+
+    --clrprimary: hsl(242, 100%, 13%);
+    --clrsecondary: hsl(236, 74%, 61%);
+    --clraccent: hsla(133, 97%, 54%, 0.75);
+    --clrneutral: whitesmoke;
+    --clrneutral15: rgba(255, 255, 255, 0.15);
+    --clrneutral30: rgba(255, 255, 255, 0.3);
+
+}
+
+/* MOBILE LAYOUT */
+
+/* Header */
+
+.body-header-nav-bar .nav-bar-link #about-logo {
+
+    color: var(--clraccent); /*to indicate current page*/
+
+}
+
+/* Main */
+
+main {
+
+    margin-top: 12vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    gap: 1rem;
+
+}
+
+/* Main - Hero */
+
+.hero{
+    
+    margin: 6rem 1rem;
+
+}
+
+.hero-title{
+
+    font-size: 5rem;
+    font-weight: 1;
+    margin: 3rem;
+
+}
+
+.hero-title-pipe{
+
+    font-size: 6rem;
+    font-weight: 200;
+
+}
+
+.hero-summary{
+
+    font-weight: 200;
+
+}
+
+.hero-summary a{
+
+    padding-bottom: 0.15rem;
+
+    color: var(--clrneutral);
+    text-decoration: none;
+
+    border-width: 0 0 0.1rem 0; 
+    border-color: var(--clraccent);
+    border-style: solid;
+    border-radius: 0.6rem;
+
+}
+
+.hero-summary a:hover{
+
+    border-color: var(--clrneutral);
+
+}
+
+/* Main - About */
+
+.about{
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    margin-bottom: 3rem;
+
+    border: 0.15rem var(--clrneutral15) solid;
+    border-radius: 0.6rem;
+
+}
+
+.about-header{
+
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+}
+
+.about-header span{
+
+    padding: 0.5rem 1rem;
+    font-size: 2.1rem;
+    font-weight: 600;
+
+    border-width: 0rem 0.24rem;
+    border-radius: 0.69rem;
+    border-color: var(--clraccent);
+    border-style: solid;
+
+}
+
+.about-content{
+
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.about-description {
+
+    font-size: larger;    
+    padding: 1rem;
+
+    max-width: 60ch;
+
+}
+
+.about-image > img {
+
+    padding: 0.5rem;
+    border: 0.15rem var(--clrneutral30) solid;
+    border-radius: 1rem;
+
+    height: 30vw;
+    width: 30vw;
+
+}
+
+/* PC LAYOUT */
+
+@media screen and (min-width: 900px) {
+    
+    /* Main - Hero */
+
+    .hero-summary{
+
+        margin-top: 9rem;
+        margin-bottom: 9rem;
+
+    }
+
+    /* Main - About */  
+
+    .about {
+
+        margin-bottom: 7.2vh;
+
+        border: none;
+
+    }
+
+    .about-header{
+
+        margin-top: 0;
+        margin-bottom: 2rem;
+
+    }
+
+    .about-content{
+
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 5vw;
+
+    }
+
+    .about-description {
+
+        padding-left: 1rem;
+        order: 1;
+
+    }
+
+    .about-image {
+
+        order: 2;
+
+    }
+
+    .about-image > img {
+
+        height: 50vh;
+        width: 50vh;
+
+    }
+
+    /* Main - Contact */
+
+    .contact{
+
+        margin-bottom: 3rem;
+    }
+
+}
